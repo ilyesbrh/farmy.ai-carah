@@ -1,0 +1,31 @@
+@import '../../../node_modules/startbootstrap-landing-page/vendor/simple-line-icons/css/simple-line-icons.css';
+@import '../../assets/css/color.scss';
+/*
+ * Start Bootstrap - Landing Page v5.0.4 (https://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+// Variables
+
+// Restated Bootstrap Variables
+
+
+// Global CSS
+body {
+    @include body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include body-font;
+    font-weight: 700;
+}
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}

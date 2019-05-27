@@ -1,0 +1,37 @@
+<input #fi type="file" accept="image/*" (change)="images(fi)" style="display: none;" multiple>
+
+<div class="container">
+  <div class="row mx-1 mb-4">
+    <div class="col-10 m-auto d-flex justify-content-between">
+      <button type="button" class="btn btn-primary mr-4" (click)="fi.click()">upload</button>
+      <button type="button" class="btn bgc-green-500 text-white " (click)="pushit()">Send Problem</button>
+    </div>
+  </div>
+  <div class="row m-auto">
+    <!-- Tab panes -->
+    <form class="col-md-10 col-sm-10 m-auto justify-content-start">
+      <div class="form-group ">
+        <label for="title">Title</label>
+        <input type="text" name="title" [(ngModel)]="model.title" class="form-control" id="title"
+          aria-describedby="titre de problem" placeholder="titre de problem">
+        <small id="titreHelp" class="form-text text-muted">se titre aide lexpert de trouvé une solution plus
+          rapide</small>
+      </div>
+      <div class="form-group">
+        <label for="description">description</label>
+        <textarea name="desc" [(ngModel)]="model.desc" class="form-control" id="description"
+          placeholder="plus information sure le problem"></textarea>
+      </div>
+    </form>
+    <div class="col-12">
+      <div class="row m-auto justify-content-center">
+        <div *ngFor="let item of model.images; let i=index" class=" col-sm-4 col-md-3 p-0 m-3 show-cancel"
+          style="height:100%">
+          <img [src]="!!item.data ? item.data : item.path" class="img-responsive image">
+          <button type="button" class="btn btn-sm button"><i class="fas fa-window-close fa-2x"
+              (click)="remove(item)"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

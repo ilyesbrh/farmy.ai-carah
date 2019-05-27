@@ -1,0 +1,35 @@
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Problem } from 'src/app/Store/model';
+import { Store } from '@ngrx/store';
+import { State, getProblem } from 'src/app/Store';
+import { Observable } from 'rxjs';
+
+@Component({
+  selector: 'app-problem-detaill',
+  templateUrl: './problem-detaill.component.html',
+  styleUrls: ['./problem-detaill.component.scss']
+})
+export class ProblemDetaillComponent implements OnInit {
+
+  @ViewChild("modal", { read: ElementRef }) modal: ElementRef;
+  @ViewChild("image", { read: ElementRef }) image: ElementRef;
+  @ViewChild("caption", { read: ElementRef }) caption: ElementRef;
+
+  model: Observable<Problem>;
+
+  constructor(private store: Store<State>) { }
+
+  ngOnInit() {
+    this.model = this.store.select<Problem>(getProblem, { index: 0 });
+  }
+
+  Show(event) {
+
+    this.modal.nativeElement.style.display = 'block';
+    this.image.nativeElement.src = '../../../../assets/img/bg-showcase-2.jpg';
+    this.caption.nativeElement.innerHTML = 'test';
+  }
+  hide() {
+    this.modal.nativeElement.style.display = 'none';
+  }
+}

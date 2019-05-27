@@ -1,0 +1,40 @@
+{
+    "farmer": {
+        "full name": "string",
+        "adress": "string",
+        "phone": "string",
+        "mail": "mail",
+        "crop type": "string"
+    },
+    "expert": {
+        "full name": "string",
+        "adress": "string",
+        "phone": "string",
+        "mail": "mail",
+        "domain": "string"
+    },
+    "problem": {
+        "title": "string",
+        "desc": "string",
+        "images": [
+            {
+                "path": "string"
+            }
+        ],
+        "farmer": "farmer",
+        "dateTime": "dateTime",
+        "solution": {
+            "model_solution": {
+                "disease": "string",
+                "confidence": "number"
+            },
+            "expert_solution": [
+                {
+                    "expert": "expert",
+                    "disease_desc": "string",
+                    "Phytosanitary_product": "string"
+                }
+            ]
+        }
+    }
+}
