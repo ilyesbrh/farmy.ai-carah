@@ -1,7 +1,9 @@
 // @ts-ignore
-import Delta from 'quill-delta';
+import 'quill-delta';
 // @ts-ignore
 import Autolinker from 'autolinker';
+
+declare const Delta;
 
 const defaults = {
   globalRegularExpression: /https?:\/\/[\S]+/g,
