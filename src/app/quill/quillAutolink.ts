@@ -1,5 +1,4 @@
-// @ts-ignore
-import 'quill-delta';
+import './quill-delta/dist/Delta.js';
 // @ts-ignore
 import Autolinker from 'autolinker';
 
