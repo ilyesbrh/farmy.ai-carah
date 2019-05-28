@@ -12,4 +12,5 @@ export const reducers: ActionReducerMap<State> = {
 
 export const selectProblems = createFeatureSelector<problem.State>('Problem');
 export const getProblems = createSelector(selectProblems,problem.getProblems);
-export const getProblem = createSelector(selectProblems,problem.getProblem);
+export const getProblemByIndex = createSelector(selectProblems,problem.getProblemById);
+export const getProblemById = createSelector(selectProblems,problem.getProblemByIndex);

@@ -32,7 +32,8 @@
                 {
                     "expert": "expert",
                     "disease_desc": "string",
-                    "Phytosanitary_product": "string"
+                    "Phytosanitary_product": "string",
+                    "detail":"string"
                 }
             ]
         }

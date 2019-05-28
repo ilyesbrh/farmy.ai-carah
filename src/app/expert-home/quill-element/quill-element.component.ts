@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { QuillInitializeService } from 'src/app/quill/services/quillInitialize.service';
 import 'quill-mention';
 import 'quill-emoji';
@@ -10,7 +10,13 @@ import 'quill-emoji';
 })
 export class QuillElementComponent {
 
-  htmlText = "<p>Testing</p>"
+  
+  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
+  @Input() set value(value) {
+    this.htmlText = value;
+  }
+  
+  htmlText = "<p>Testing</p>";
   hasFocus = false;
 
   atValues = [
@@ -102,7 +108,7 @@ export class QuillElementComponent {
   }
 
   onContentChanged = (event) => {
-    //console.log(event.html);
+    this.valueChange.emit(event.html);
   }
 
   onFocus = () => {

@@ -44,6 +44,7 @@ import { QuillInitializeService } from './quill/services/quillInitialize.service
 import { QuillModule } from 'ngx-quill';
 import { QuillElementComponent } from './expert-home/quill-element/quill-element.component';
 import { ExpertProblemDetaillComponent } from './expert-home/feed/expert-problem-detaill/expert-problem-detaill.component';
+import { ReplyProblemComponent } from './expert-home/feed/expert-problem-detaill/reply-problem/reply-problem.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ExpertProblemDetaillComponent } from './expert-home/feed/expert-problem
     FeedComponent,
     HistoryComponent,
     QuillElementComponent,
-    ExpertProblemDetaillComponent
+    ExpertProblemDetaillComponent,
+    ReplyProblemComponent
   ],
   imports: [
     BrowserModule,

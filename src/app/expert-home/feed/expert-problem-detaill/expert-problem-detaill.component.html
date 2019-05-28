@@ -3,36 +3,20 @@
     <div class="card-header d-flex justify-content-between align-items-center">
       <h3><strong>{{(model | async).title}}</strong></h3>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+      <button type="button" [routerLink]="[ '/expert-home/problem/reply/'+(model | async).id ]"
+        class="btn btn-primary btn-lg">
         Reply
       </button>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="modelId" tabindex="1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content" style="width:90%">
-            <div class="modal-body">
-              <div class="container-fluid m-0 p-0">
-                <app-quill-element style="width: 500px"></app-quill-element>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Send</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
     <div id="carousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img (click)="Show(1)" class="card-img-top" src="../../../../assets/img/bg-showcase-2.jpg" height="500px"
+          <img (click)="Show(1)" class="card-img-top" src="/assets/img/bg-showcase-2.jpg" height="500px"
             alt="Card image cap">
         </div>
         <div class="carousel-item">
-          <img (click)="Show(1)" class="card-img-top" src="../../../../assets/img/bg-showcase-2.jpg" height="500px"
+          <img (click)="Show(1)" class="card-img-top" src="/assets/img/bg-showcase-2.jpg" height="500px"
             alt="Card image cap">
         </div>
       </div>
@@ -69,7 +53,7 @@
     <div class="card mb-3 w-100">
       <div class="card-header d-flex justify-content-between align-items-center px-4">
         <div class="d-flex align-items-center">
-          <img src="../../../../assets/img/bg-masthead.jpg" alt="Avatar" class="avatar mr-3">
+          <img src="/assets/img/bg-masthead.jpg" alt="Avatar" class="avatar mr-3">
           <h5>expert name</h5>
         </div>
         <div class="d-flex align-items-center">

@@ -46,7 +46,8 @@ export interface ModelSolution {
 }
 
 export interface ExpertSolution {
-    expert_id: string,
-    disease_desc: string,
-    Phytosanitary_product: string,
+    expert_id?: string,
+    disease_desc?: string,
+    Phytosanitary_product?: string,
+    detail?: string
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Problem } from 'src/app/Store/model';
 import { Store } from '@ngrx/store';
-import { State, getProblem } from 'src/app/Store';
+import { State, getProblemByIndex } from 'src/app/Store';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -20,7 +20,7 @@ export class ProblemDetaillComponent implements OnInit {
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
-    this.model = this.store.select<Problem>(getProblem, { index: 0 });
+    this.model = this.store.select<Problem>(getProblemByIndex, { index: 0 });
   }
 
   Show(event) {

@@ -1,6 +1,5 @@
 import { Problem } from '../model';
 import { ProblemActionTypes, ProblemActions } from '../Actions/Problem.Action';
-import { createSelector } from '@ngrx/store';
 
 export interface State {
     problems: Array<Problem>
@@ -8,7 +7,8 @@ export interface State {
 
 const initialState: State = {
     problems: [{
-        title: 'testing store',
+        id: 123,
+        title: 'problem x',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec purus mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla auctor non risus eu scelerisque. Nam a felis et odio efficitur faucibus. Integer mattis dolor non velit tempor vehicula. In dignissim magna ac dignissim euismod. Nam lacinia diam quis metus accumsan, quis hendrerit dolor ultrices. Curabitur tempor urna eget magna porta, et feugiat justo pellentesque. Nullam ultricies at enim non molestie. Fusce imperdiet sodales varius.'
     }]
 };
@@ -33,4 +33,6 @@ export function reducer(state = initialState, action: ProblemActions): State {
 }
 
 export const getProblems = (state: State) => state.problems;
-export const getProblem = (state: State, props: any) => state.problems[props.index];
+export const getProblemById = (state: State, props: any) => state.problems[props.index];
+export const getProblemByIndex = (state: State, props: any) => state.problems.find(val => val.id == props.id);
+

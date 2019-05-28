@@ -16,6 +16,7 @@ import { ExpertNotificationsComponent } from './expert-home/expert-notifications
 import { FeedComponent } from './expert-home/feed/feed.component';
 import { HistoryComponent } from './expert-home/history/history.component';
 import { ExpertProblemDetaillComponent } from './expert-home/feed/expert-problem-detaill/expert-problem-detaill.component';
+import { ReplyProblemComponent } from './expert-home/feed/expert-problem-detaill/reply-problem/reply-problem.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,7 @@ const routes: Routes = [
       [
         { path: '', component: FeedComponent },
         { path: 'problem/:id', component: ExpertProblemDetaillComponent },
+        { path: 'problem/reply/:id', component: ReplyProblemComponent },
         { path: 'notifications', component: ExpertNotificationsComponent },
         { path: 'history', component: HistoryComponent }
       ]
