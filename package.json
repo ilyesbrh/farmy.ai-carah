@@ -54,7 +54,7 @@
     "quill-delta": "^4.2.1",
     "quill-emoji": "^0.1.4",
     "quill-image-resize-module": "^3.0.0",
-    "quill-mention": "^2.0.4",
+    "quill-mention": "^4.0.0",
     "rxjs": "~6.3.3",
     "startbootstrap-landing-page": "^5.0.4",
     "sweetalert2": "^8.9.0",
